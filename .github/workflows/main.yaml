@@ -25,7 +25,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t andrews011/todo-api:latest .
-          docker push Andrews011/todo-api:latest
+          docker push andrews011/todo-api:latest
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -50,7 +50,7 @@ jobs:
             --application-name todo-api-1 \
             --deployment-group-name codedeploygroup1 \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
-            --github-location repository=Charly00019/todo-api-codedeploy,commitId=${{ github.sha }}
+            --github-location repository=charly00019/todo-api-codedeploy,commitId=${{ github.sha }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
