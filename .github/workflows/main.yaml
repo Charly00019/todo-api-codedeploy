@@ -48,7 +48,7 @@ jobs:
         run: |
           aws deploy create-deployment \
             --application-name todo-api-1 \
-            --deployment-group-name todoapi1group \
+            --deployment-group-name ec2-codedeployrole \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
             --github-location repository=charly00019/todo-api-codedeploy,commitId=${{ github.sha }}
         env:
