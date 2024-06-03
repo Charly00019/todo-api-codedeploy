@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t Andrews011/todo-code-depl:latest .
+          docker build -t andrews011/todo-api:latest .
           docker push Andrews011/todo-api:latest
 
       - name: Upload artifact
