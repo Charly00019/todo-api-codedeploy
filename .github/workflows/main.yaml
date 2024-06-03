@@ -50,7 +50,7 @@ jobs:
             --application-name todo-api-1 \
             --deployment-group-name todoapi1group \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
-            --github-location repository=charly00019/todo-api,commitId=${{ github.sha }}
+            --github-location repository=charly00019/todo-api-codedeploy,commitId=${{ github.sha }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
